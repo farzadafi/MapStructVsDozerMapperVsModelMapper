@@ -10,4 +10,16 @@ public class User {
     private String email;
     private Address address;
     private List<String> favoriteSubject;
+
+    public User(String firstName, String lastName, String userName,
+                String password, String email, Address address,
+                List<String> favoriteSubject) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+        this.address = address;
+        this.favoriteSubject = favoriteSubject;
+    }
 }
