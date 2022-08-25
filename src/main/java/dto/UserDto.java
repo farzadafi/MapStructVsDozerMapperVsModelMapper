@@ -1,9 +1,13 @@
 package dto;
 
+import lombok.*;
 import model.Address;
 
-import java.util.List;
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class UserDto {
     private String firstName;
     private String lastName;
@@ -11,5 +15,5 @@ public class UserDto {
     private String password;
     private String email;
     private Address address;
-    private List<String> favoriteSubject;
+    private String[] favoriteSubject;
 }
