@@ -16,4 +16,9 @@ public class DozerMapperImpel implements DozerMapper {
     public User dtoToModel(UserDto userDto) {
         return mapper.map(userDto,User.class);
     }
+
+    @Override
+    public UserDto modelToDto(User user) {
+        return mapper.map(user,UserDto.class);
+    }
 }
