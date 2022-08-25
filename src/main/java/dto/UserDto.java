@@ -14,6 +14,6 @@ public class UserDto {
     private String userName;
     private String password;
     private String email;
-    private Address address;
-    private String[] favoriteSubject;
+    private String address;
+    private String favoriteSubject;
 }
