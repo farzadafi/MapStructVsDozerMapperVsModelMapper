@@ -1,7 +1,6 @@
 package dto;
 
 import lombok.*;
-import model.Address;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +13,6 @@ public class UserDto {
     private String userName;
     private String password;
     private String email;
-    private String address;
-    private String favoriteSubject;
+    private AddressDto address;
+    private String[] favoriteSubject;
 }
