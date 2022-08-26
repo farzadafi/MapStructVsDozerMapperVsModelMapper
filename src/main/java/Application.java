@@ -1,7 +1,6 @@
 import dto.AddressDto;
 import dto.UserDto;
 import mapper.dozerMapper.DozerMapperImpel;
-import model.Address;
 import model.User;
 
 import java.time.Duration;
@@ -36,4 +35,13 @@ public class Application {
         dozerMapperTest(userDtoList);
     }
 
+    public void dozerMapperTest(List<UserDto> userDtoList){
+        Instant start = Instant.now();
+        List<User> userList = mapper.dtoListToModelList(userDtoList);
+        Instant finish = Instant.now();
+
+        long timeElapsed = Duration.between(start, finish).toMillis();
+        float seconds = TimeUnit.MILLISECONDS.toSeconds(timeElapsed);
+        System.out.println(ANSI_CYAN_BACKGROUND + seconds + " second elapsed for dozer mapper");
+    }
 }
