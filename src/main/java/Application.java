@@ -11,11 +11,11 @@ import java.util.concurrent.TimeUnit;
 
 public class Application {
 
-    private final DozerMapperImpel mapper;
-    public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
+    private final DozerMapperImpel dozerMapper;
+    private static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 
     public Application(){
-        mapper = new DozerMapperImpel();
+        dozerMapper = new DozerMapperImpel();
     }
 
     public static void main(String[] args) {
@@ -37,7 +37,7 @@ public class Application {
 
     public void dozerMapperTest(List<UserDto> userDtoList){
         Instant start = Instant.now();
-        List<User> userList = mapper.dtoListToModelList(userDtoList);
+        List<User> userList = dozerMapper.dtoListToModelList(userDtoList);
         Instant finish = Instant.now();
 
         long timeElapsed = Duration.between(start, finish).toMillis();
