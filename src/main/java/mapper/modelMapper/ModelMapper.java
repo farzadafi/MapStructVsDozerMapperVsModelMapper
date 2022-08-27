@@ -5,4 +5,5 @@ import model.User;
 
 public interface ModelMapper {
     User dtoToModel(UserDto user);
+    UserDto modelToDto(User user);
 }
