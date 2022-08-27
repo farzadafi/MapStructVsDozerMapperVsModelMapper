@@ -3,6 +3,9 @@ package mapper.modelMapper;
 import dto.UserDto;
 import model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ModelMapperImpel implements ModelMapper{
 
     private final org.modelmapper.ModelMapper mapper;
@@ -19,5 +22,15 @@ public class ModelMapperImpel implements ModelMapper{
     @Override
     public UserDto modelToDto(User user) {
         return mapper.map(user,UserDto.class);
+    }
+
+    @Override
+    public List<User> dtoListToModelList(List<UserDto> userDtoList) {
+        List<User> userList = new ArrayList<>();
+        for (UserDto u:userDtoList
+        ) {
+            userList.add(mapper.map(u,User.class));
+        }
+        return userList;
     }
 }
