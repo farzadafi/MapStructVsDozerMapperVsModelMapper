@@ -1,4 +1,4 @@
-# MapStructVsDozerMapperVsModelMapper
+# MapStructVsDozerMapperVsModelMapper /n
 This is a simple Project for detect what mapper is faster with another mapper
 I checked Three popular mapper
 1-Model mapper http://modelmapper.org/
